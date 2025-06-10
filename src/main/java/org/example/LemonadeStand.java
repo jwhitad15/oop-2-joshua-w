@@ -67,6 +67,16 @@ public class LemonadeStand {
     // This method should create a new Lemonade object with the given arguments and then attempt to make the lemonade.
     // If the lemonade is successfully made, the method should add the sale amount to the money field and return true.
     //
+    public boolean sellLemonade(int lemons, int sugar, int ice) {
+        Lemonade overloadedLemonade = new Lemonade();
+
+        if (tryMakingLemonade(overloadedLemonade) != null) {
+            money += calculateSale(overloadedLemonade);
+            return true;
+        } else {
+            return false;
+        }
+    }
     // HINT: You can copy and paste the body of the sellLemonade method and should only need to modify the first line.
 
     private Lemonade tryMakingLemonade(Lemonade lemonade) {
