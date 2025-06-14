@@ -34,11 +34,11 @@ public class LemonadeTests {
 
     @Test
     public void testMix() {
-        Lemonade lemonade1 = new Lemonade(5, 3, 4);
+        String lemonade1 = new Lemonade(5, 3, 4).toString();
         Lemonade lemonade2 = new Lemonade(3, 2, 1);
-        Lemonade lemonade3 = Lemonade.mix(lemonade1, lemonade2);
-        assertEquals(8, lemonade3.getLemons());
-        assertEquals(5, lemonade3.getSugar());
-        assertEquals(5, lemonade3.getIce());
+        int lemonade3 = Lemonade.mix(lemonade1, String.valueOf(lemonade2));
+        assertEquals(8, lemonade3);
+        assertEquals(5, lemonade3);
+        assertEquals(5, lemonade3);
     }
 }
